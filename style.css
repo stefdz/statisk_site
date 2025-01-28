@@ -90,7 +90,7 @@ nav {
 
 section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
 }
 
@@ -101,4 +101,8 @@ article {
   grid-template-columns: subgrid;
   grid-row: span 3;
   gap: 0;
+}
+
+img {
+  width: 100%;
 }
