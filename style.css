@@ -1,5 +1,8 @@
 /* ..menu.. */
 
+.forside {
+  padding: 2em;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -15,7 +18,7 @@ header {
 h1 {
   margin: 0;
   font-size: 1.8rem;
-  color: #681018;
+  color: #910612;
 }
 
 h1 a {
@@ -27,11 +30,25 @@ h2 {
   padding-top: 2em;
   margin: 10px 0;
   font-size: 1.4rem;
-  color: #444;
+  color: #0a0a0a;
+  text-align: center;
 }
 
 nav {
   margin-top: 20px;
+}
+
+.saleslable {
+  position: absolute;
+  visibility: hidden;
+  top: 15px;
+  left: 15px;
+  background-color: tomato;
+  padding: 5px 8px;
+}
+
+.onsale {
+  visibility: visible;
 }
 
 /* .. mobil.. */
@@ -92,10 +109,11 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
+  padding: 3em;
 }
 
 article {
-  background-color: beige;
+  background-color: rgb(255, 255, 255);
   border-radius: 5px;
   display: grid;
   grid-template-columns: subgrid;
@@ -105,4 +123,49 @@ article {
 
 img {
   width: 100%;
+  border: #0e0e0e solid;
+}
+.knap {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(16, 15, 15);
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* ..produkt.. */
+
+.logo1 {
+  text-align: center;
+  padding: 2em;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5em;
+}
+
+.product-container1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5em;
+}
+
+@media (min-width: 768px) {
+  .product-container {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 70%;
+    max-width: 768px;
+  }
+  .product-details {
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 40px;
+  }
 }
